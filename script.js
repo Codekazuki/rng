@@ -14,3 +14,4 @@ const styleNumber = () => {
     number.style.color = "green";
   }
 };
+generateNumber();
