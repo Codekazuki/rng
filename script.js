@@ -16,9 +16,13 @@ const styleNumber = () => {
   }
 };
 generateNumber();
+const numberChangeEvent = new Event("numberChange");
 const changeMessage = () => {
   if (number.innerHTML > 5) {
     message.innerHTML = "Message is going up";
+  } else {
+    message.innerHTML = "Message is going down";
   }
 };
-message.addEventListener("", changeMessage);
+number.dispatchEvent(numberChangeEvent);
+message.addEventListener("numberChange", changeMessage);
