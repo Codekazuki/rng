@@ -1,5 +1,6 @@
 const number = document.querySelector(".number");
 const button = document.querySelector(".button");
+const message = document.querySelector(".message");
 
 const generateNumber = () => {
   const generatedNumber = Math.floor(Math.random() * 10 + 1);
@@ -15,3 +16,9 @@ const styleNumber = () => {
   }
 };
 generateNumber();
+const changeMessage = () => {
+  if (number.innerHTML > 5) {
+    message.innerHTML = "Message is going up";
+  }
+};
+message.addEventListener("", changeMessage);
